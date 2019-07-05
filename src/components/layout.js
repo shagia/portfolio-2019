@@ -10,8 +10,7 @@ export default ({ children }) => (
 			</h3>
 		</Link>
 		<Link
-			to={`/about/`}
-			css={css`float: right;`}>
+			to={`/about/`}>
 			About
 		</Link>
 		<br/>
