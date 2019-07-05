@@ -6,6 +6,6 @@
 
 module.exports = {
  siteMetadata: {
- 	title: 'Title from siteMetadata'
+ 	title: 'SHAGIA'
  }
 }

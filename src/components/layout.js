@@ -1,13 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, Link, graphql } from "gatsby"
 
 
-export default ({ children }) => (
+export default ({ children }) => {
+	const data = useStaticQuery(
+		graphql`
+			query {
+				site {
+					siteMetadata {
+						title
+					}
+				}
+			}
+		`)
+return (
 	<div>
-	
+
 		<Link to={'/'}>
 			<h3>
-				Test Title
+				{data.site.siteMetadata.title}
 			</h3>
 		</Link>
 
@@ -18,3 +29,4 @@ export default ({ children }) => (
 		{children}
 	</div>
 	)
+}
