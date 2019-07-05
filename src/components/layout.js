@@ -4,13 +4,14 @@ import { Link } from "gatsby"
 
 export default ({ children }) => (
 	<div>
-		<Link>
+	
+		<Link to={'/'}>
 			<h3>
 				Test Title
 			</h3>
 		</Link>
-		<Link
-			to={`/about/`}>
+
+		<Link to={`/about/`}>
 			About
 		</Link>
 		<br/>
