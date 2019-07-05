@@ -1,8 +1,9 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
-
+/* uses useStaticQuery to grab GraphQL data in a non-page component */
 export default ({ children }) => {
+	
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -13,9 +14,10 @@ export default ({ children }) => {
 				}
 			}
 		`)
-return (
-	<div>
 
+	return (
+	
+	<div>
 		<Link to={'/'}>
 			<h3>
 				{data.site.siteMetadata.title}

@@ -5,7 +5,16 @@
  */
 
 module.exports = {
- siteMetadata: {
- 	title: 'SHAGIA'
- }
+	siteMetadata: {
+ 		title: 'SHAGIA'
+ 	},
+	plugins: [
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: 'src',
+				path: `${__dirname}/src/`,
+			},
+		},
+	],
 }
